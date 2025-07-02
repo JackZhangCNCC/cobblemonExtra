@@ -1,0 +1,138 @@
+plugins {
+    id 'java-library'
+    id 'eclipse'
+    id 'idea'
+    id 'maven-publish'
+    id 'net.neoforged.moddev' version '2.0.78'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+version = mod_version
+group = mod_group_id
+
+base {
+    archivesName = mod_id
+}
+
+repositories {
+    mavenCentral()
+    maven { url = "https://maven.impactdev.net/repository/development/" } // Cobblemon
+    maven { url = "https://thedarkcolour.github.io/KotlinForForge/" } // Kotlin for Forge
+    maven { url = "https://maven.architectury.dev/" } // Architectury
+    maven { url = "https://maven.teamresourceful.com/repository/maven-public/" } // For MidnightLib
+    
+    // Modrinth Maven for gravels_extended_battles
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = "https://api.modrinth.com/maven"
+            }
+        }
+        filter {
+            includeGroup "maven.modrinth"
+        }
+    }
+}
+
+neoForge {
+    version = project.neo_version
+
+    runs {
+        client {
+            client()
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+            programArguments.addAll '--username', 'Developer'
+        }
+
+        server {
+            server()
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+            programArgument '--nogui'
+        }
+
+        gameTestServer {
+            type = "gameTestServer"
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        }
+
+        data {
+            data()
+            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+        }
+        
+        // 通用配置应用到所有run配置
+        configureEach {
+            // 推荐的日志配置
+            systemProperty 'forge.logging.markers', 'REGISTRIES'
+            logLevel = org.slf4j.event.Level.DEBUG
+        }
+    }
+
+    mods {
+        cobblemonextra {
+            sourceSet(sourceSets.main)
+        }
+    }
+}
+
+dependencies {
+    // Cobblemon from Impact Dev Maven
+    implementation "com.cobblemon:neoforge:${cobblemon_version}"
+    implementation "thedarkcolour:kotlinforforge-neoforge:${kotlin_forge_version}"
+    
+    // 注意：gravels_extended_battles暂时移除，因为Modrinth上的版本是Fabric版本
+    // 如果需要GEB支持，需要找到正确的NeoForge版本或者使用compileOnly
+    // implementation "maven.modrinth:gravels-extended-battles:${geb_version}"
+    
+    // GEB的依赖项（可选）
+    // implementation "dev.architectury:architectury-neoforge:${architectury_version}"
+    // implementation "maven.modrinth:midnightlib:${midnightlib_version}"
+}
+
+tasks.withType(ProcessResources).configureEach {
+    var replaceProperties = [
+            minecraft_version   : minecraft_version,
+            minecraft_version_range: minecraft_version_range,
+            neo_version         : neo_version,
+            neo_version_range   : neo_version_range,
+            loader_version_range: loader_version_range,
+            mod_id              : mod_id,
+            mod_name            : mod_name,
+            mod_license         : mod_license,
+            mod_version         : mod_version,
+            mod_authors         : mod_authors,
+            mod_description     : mod_description,
+            cobblemon_version   : cobblemon_version
+    ]
+    inputs.properties replaceProperties
+
+    filesMatching(['META-INF/neoforge.mods.toml']) {
+        expand replaceProperties
+    }
+}
+
+idea {
+    module {
+        downloadSources = true
+        downloadJavadoc = true
+    }
+}
+
+publishing {
+    publications {
+        register('mavenJava', MavenPublication) {
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            url "file://${project.projectDir}/repo"
+        }
+    }
+} 

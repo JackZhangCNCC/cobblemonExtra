@@ -1,0 +1,22 @@
+{
+  "item.cobblemonextra.action_hero_mask": "Action Hero Mask",
+  "item.cobblemonextra.xiaoxinite": "Xiaoxinite",
+  
+  "cobblemon.species.xiaoxin.name": "Xiaoxin",
+  "cobblemon.species.xiaoxin-mega.name": "Mega Xiaoxin",
+  
+  "cobblemon.move.actionbeam.name": "Action Beam",
+  "cobblemon.move.actionbeam": "Action Beam",
+  "cobblemon.move.actionbeam.desc": "Fires a beam filled with Action Hero power to attack the enemy. Raises the user's Special Attack after use.",
+  
+  "cobblemon.move.shakingbutt.name": "Shaking Butt",
+  "cobblemon.move.shakingbutt": "Shaking Butt", 
+  "cobblemon.move.shakingbutt.desc": "Attacks the enemy with cute wiggling buttocks. Always strikes first with high priority.",
+  
+  "cobblemon.species.xiaoxin.desc": "Nohara Shinnosuke, a 5-year-old kindergarten boy who loves Action Hero and often does hilarious things.",
+  
+  "item.cobblemonextra.action_hero_mask.tooltip": "Xiaoxin's exclusive item. Increases the power of all moves by 50% when held.",
+  "item.cobblemonextra.xiaoxinite.tooltip": "A miraculous stone that allows Xiaoxin to Mega Evolve.",
+  
+  "itemGroup.cobblemonextra": "CobblemonExtra"
+}

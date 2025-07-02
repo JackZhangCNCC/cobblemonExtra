@@ -1,0 +1,26 @@
+{
+  "name": "actionbeam",
+  "displayName": "cobblemon.move.actionbeam.name",
+  "description": "cobblemon.move.actionbeam.desc",
+  "type": "psychic",
+  "damageCategory": "special",
+  "power": 100,
+  "accuracy": 90,
+  "pp": 15,
+  "priority": 0,
+  "target": "single_adjacent_foe",
+  "effectChances": [
+    {
+      "chance": 100,
+      "target": "self",
+      "effects": [
+        {
+          "name": "stat_boost",
+          "stat": "special_attack",
+          "amount": 1
+        }
+      ]
+    }
+  ],
+  "flags": ["protect", "mirror"]
+} 

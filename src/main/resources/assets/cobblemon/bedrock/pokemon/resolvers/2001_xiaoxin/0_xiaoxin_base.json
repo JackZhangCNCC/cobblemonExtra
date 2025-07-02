@@ -1,0 +1,21 @@
+{
+  "species": "cobblemon:xiaoxin",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:xiaoxin",
+      "model": "cobblemon:xiaoxin.geo",
+      "texture": "cobblemon:textures/pokemon/2001_xiaoxin/xiaoxin.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/2001_xiaoxin/xiaoxin_shiny.png"
+    },
+    {
+      "aspects": ["mega"],
+      "texture": "cobblemon:textures/pokemon/2001_xiaoxin/xiaoxin_mega.png"
+    }
+  ]
+} 

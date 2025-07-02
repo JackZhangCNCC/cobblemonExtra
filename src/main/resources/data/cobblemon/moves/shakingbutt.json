@@ -1,0 +1,14 @@
+{
+  "name": "shakingbutt",
+  "displayName": "cobblemon.move.shakingbutt.name",
+  "description": "cobblemon.move.shakingbutt.desc",
+  "type": "fighting",
+  "damageCategory": "physical",
+  "power": 85,
+  "accuracy": 100,
+  "pp": 30,
+  "priority": 1,
+  "target": "single_adjacent_foe",
+  "effectChances": [],
+  "flags": ["contact", "protect", "mirror"]
+} 

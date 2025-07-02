@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "cobblemonextra:item/action_hero_mask"
+  }
+} 

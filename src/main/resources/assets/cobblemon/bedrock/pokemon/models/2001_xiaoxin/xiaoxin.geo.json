@@ -1,0 +1,93 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.xiaoxin",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "xiaoxin",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "xiaoxin",
+					"pivot": [0, 6, 0],
+					"cubes": [
+						{"origin": [-3, 0, -0.5], "size": [6, 8, 1], "uv": [0, 16]}
+					]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [0, 12, 0],
+					"cubes": [
+						{"origin": [-4, 8, -0.5], "size": [8, 8, 1], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "left_eye",
+					"parent": "head",
+					"pivot": [-1.5, 12, 0],
+					"cubes": [
+						{"origin": [-2, 11.5, -0.51], "size": [1, 1, 0], "uv": [16, 0]}
+					]
+				},
+				{
+					"name": "right_eye",
+					"parent": "head",
+					"pivot": [1.5, 12, 0],
+					"cubes": [
+						{"origin": [1, 11.5, -0.51], "size": [1, 1, 0], "uv": [18, 0]}
+					]
+				},
+				{
+					"name": "mouth",
+					"parent": "head",
+					"pivot": [0, 10, 0],
+					"cubes": [
+						{"origin": [-1, 9.5, -0.51], "size": [2, 1, 0], "uv": [16, 2]}
+					]
+				},
+				{
+					"name": "left_arm",
+					"parent": "body",
+					"pivot": [-4, 7, 0],
+					"cubes": [
+						{"origin": [-5, 4, -0.5], "size": [2, 4, 1], "uv": [20, 0]}
+					]
+				},
+				{
+					"name": "right_arm",
+					"parent": "body",
+					"pivot": [4, 7, 0],
+					"cubes": [
+						{"origin": [3, 4, -0.5], "size": [2, 4, 1], "uv": [24, 0]}
+					]
+				},
+				{
+					"name": "left_leg",
+					"parent": "xiaoxin",
+					"pivot": [-1.5, 0, 0],
+					"cubes": [
+						{"origin": [-2.5, -4, -0.5], "size": [2, 4, 1], "uv": [24, 16]}
+					]
+				},
+				{
+					"name": "right_leg",
+					"parent": "xiaoxin",
+					"pivot": [1.5, 0, 0],
+					"cubes": [
+						{"origin": [0.5, -4, -0.5], "size": [2, 4, 1], "uv": [28, 16]}
+					]
+				}
+			]
+		}
+	]
+} 

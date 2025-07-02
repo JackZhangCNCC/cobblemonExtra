@@ -1,0 +1,30 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.xiaoxin.ground": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"ground_idle"
+					],
+					"transitions": [
+						{
+							"moving": "query.modified_move_speed > 0.1"
+						}
+					]
+				},
+				"moving": {
+					"animations": [
+						"ground_walk"
+					],
+					"transitions": [
+						{
+							"default": "query.modified_move_speed < 0.1"
+						}
+					]
+				}
+			}
+		}
+	}
+} 

@@ -1,0 +1,18 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.johnson.cobblemonextra.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "refmap": "cobblemonextra.refmap.json",
+  "client": [
+    "ButtonNarrationMixin"
+  ],
+  "server": [
+  ],
+  "mixins": [
+    "ShowdownThreadMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+} 

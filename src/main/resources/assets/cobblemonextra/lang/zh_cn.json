@@ -1,0 +1,22 @@
+{
+  "item.cobblemonextra.action_hero_mask": "动感超人面具",
+  "item.cobblemonextra.xiaoxinite": "新之助进化石",
+  
+  "cobblemon.species.xiaoxin.name": "新之助",
+  "cobblemon.species.xiaoxin-mega.name": "超级新之助",
+  
+  "cobblemon.move.actionbeam.name": "动感光波",
+  "cobblemon.move.actionbeam": "动感光波",
+  "cobblemon.move.actionbeam.desc": "发射充满动感超人力量的光波攻击敌人， 使用后自身特攻上升。",
+  
+  "cobblemon.move.shakingbutt.name": "摇摇屁屁",
+  "cobblemon.move.shakingbutt": "摇摇屁屁", 
+  "cobblemon.move.shakingbutt.desc": "用可爱的摇摆屁股攻击敌人， 速度极快必定先制攻击。",
+  
+  "cobblemon.species.xiaoxin.desc": "野原新之助，一个五岁的幼稚园小朋友， 喜欢看动感超人，经常做出令人哭笑不得的举动。",
+  
+  "item.cobblemonextra.action_hero_mask.tooltip": "新之助的专属道具， 携带后所有招式威力提升%d%%",
+  "item.cobblemonextra.xiaoxinite.tooltip": "让新之助进行Mega进化的神奇石头",
+  
+  "itemGroup.cobblemonextra": "CobblemonExtra"
+} 

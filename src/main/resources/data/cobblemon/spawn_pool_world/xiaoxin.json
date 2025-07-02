@@ -1,0 +1,23 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "xiaoxin-1",
+            "pokemon": "xiaoxin",
+            "presets": [
+                "natural",
+                "wild"
+            ],
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "ultra-rare",
+            "level": "5-20",
+            "weight": 5.0,
+            "condition": {
+                "biomes": ["#cobblemon:is_plains"]
+            }
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+  "item.cobblemonextra.action_hero_mask": "アクションヒーローマスク",
+  "item.cobblemonextra.xiaoxinite": "シンノスケナイト",
+  
+  "cobblemon.species.xiaoxin.name": "シンちゃん",
+  "cobblemon.species.xiaoxin-mega.name": "メガシンちゃん",
+  
+  "cobblemon.move.actionbeam.name": "アクションビーム",
+  "cobblemon.move.actionbeam": "アクションビーム",
+  "cobblemon.move.actionbeam.desc": "アクションヒーローの力に満ちたビームで相手を攻撃する。使用後、自分の特攻が上がる。",
+  
+  "cobblemon.move.shakingbutt.name": "ケツだけ星人",
+  "cobblemon.move.shakingbutt": "ケツだけ星人", 
+  "cobblemon.move.shakingbutt.desc": "可愛いお尻を振って相手を攻撃する。素早さが非常に高く、必ず先制攻撃する。",
+  
+  "cobblemon.species.xiaoxin.desc": "野原しんのすけ、5歳の幼稚園児。アクションヒーローが大好きで、いつも面白い行動をする。",
+  
+  "item.cobblemonextra.action_hero_mask.tooltip": "シンちゃんの専用アイテム。持たせるとすべての技の威力が50%上がる。",
+  "item.cobblemonextra.xiaoxinite.tooltip": "シンちゃんをメガ進化させる不思議な石。",
+  
+  "itemGroup.cobblemonextra": "CobblemonExtra"
+}
