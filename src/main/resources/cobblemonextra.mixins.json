@@ -10,7 +10,6 @@
   "server": [
   ],
   "mixins": [
-    "ShowdownThreadMixin"
   ],
   "injectors": {
     "defaultRequire": 1

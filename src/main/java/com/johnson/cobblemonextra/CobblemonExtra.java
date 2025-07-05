@@ -3,6 +3,7 @@ package com.johnson.cobblemonextra;
 import com.johnson.cobblemonextra.config.CobblemonExtraConfig;
 import com.johnson.cobblemonextra.item.CobblemonExtraItems;
 import com.johnson.cobblemonextra.item.CobblemonExtraCreativeTab;
+import com.johnson.cobblemonextra.showdown.ShowdownDataManager;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
@@ -44,6 +45,9 @@ public class CobblemonExtra {
             
             // 注册动感超人面具的held item效果
             registerHeldItemEffects();
+            
+            // 注入Showdown数据文件
+            ShowdownDataManager.injectShowdown();
             
             LOGGER.info("CobblemonExtra通用设置完成！");
         });
