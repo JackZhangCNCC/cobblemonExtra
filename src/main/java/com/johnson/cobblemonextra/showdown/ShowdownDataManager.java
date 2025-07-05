@@ -13,8 +13,6 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * Showdown数据管理器
@@ -63,12 +61,17 @@ public class ShowdownDataManager {
 
                 // 对items.js进行特殊处理，替换配置值
                 if ("items.js".equals(fileName)) {
-                    double powerMultiplier = CobblemonExtraConfig.getActionHeroMaskPowerMultiplier();
-                    content = content.replaceAll(
-                        "ACTION_HERO_MASK_POWER_CONFIG", 
-                        String.valueOf(powerMultiplier)
-                    );
-                    CobblemonExtra.LOGGER.info("已为'items.js'应用威力倍数配置: {}", powerMultiplier);
+                    try {
+                        double powerMultiplier = CobblemonExtraConfig.getActionHeroMaskPowerMultiplier();
+                        content = content.replaceAll(
+                            "ACTION_HERO_MASK_POWER_CONFIG", 
+                            String.valueOf(powerMultiplier)
+                        );
+                        CobblemonExtra.LOGGER.info("已为'items.js'应用威力倍数配置: {}", powerMultiplier);
+                    } catch (Exception e) {
+                        CobblemonExtra.LOGGER.warn("配置尚未初始化，使用默认值 1.5 for items.js");
+                        content = content.replaceAll("ACTION_HERO_MASK_POWER_CONFIG", "1.5");
+                    }
                 }
 
                 Files.writeString(targetPath, content, StandardCharsets.UTF_8, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);

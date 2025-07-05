@@ -24,7 +24,7 @@ module.exports = __toCommonJS(moves_exports);
 
 const Moves = {
   actionbeam: {
-    num: -1,
+    num: 8848,
     accuracy: 100,
     basePower: 80,
     category: "Special",
@@ -45,7 +45,7 @@ const Moves = {
     contestType: "Cool"
   },
   shakingbutt: {
-    num: -2,
+    num: 8849,
     accuracy: 100,
     basePower: 80,
     category: "Physical",

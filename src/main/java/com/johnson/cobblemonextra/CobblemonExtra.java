@@ -21,6 +21,15 @@ public class CobblemonExtra {
     public CobblemonExtra(IEventBus modEventBus, ModContainer modContainer) {
         LOGGER.info("CobblemonExtra开始初始化...");
         
+        // 重新启用早期创建，为智能追加提供基础
+        LOGGER.info("正在进行早期Showdown文件创建，为智能追加提供基础...");
+        try {
+            ShowdownDataManager.injectShowdown();
+            LOGGER.info("早期Showdown文件创建成功！");
+        } catch (Exception e) {
+            LOGGER.error("早期Showdown文件创建失败，将在后续事件中重试", e);
+        }
+        
         // 注册配置
         modContainer.registerConfig(ModConfig.Type.CLIENT, CobblemonExtraConfig.CLIENT_SPEC);
         
@@ -45,9 +54,6 @@ public class CobblemonExtra {
             
             // 注册动感超人面具的held item效果
             registerHeldItemEffects();
-            
-            // 注入Showdown数据文件
-            ShowdownDataManager.injectShowdown();
             
             LOGGER.info("CobblemonExtra通用设置完成！");
         });

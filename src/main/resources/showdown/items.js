@@ -28,14 +28,14 @@ const Items = {
     fling: {
       basePower: 0
     },
-    spritenum: 2001,
+    spritenum: 8848,
     onBasePowerPriority: 15,
     onBasePower(basePower, user, target, move) {
       if (user.baseSpecies.num === 2001) {
         return this.chainModify(ACTION_HERO_MASK_POWER_CONFIG);
       }
     },
-    itemUser: ["Xiaoxin"],
+    itemUser: ["xiaoxin"],
     num: 2001,
     gen: 8,
     isNonstandard: "Past"

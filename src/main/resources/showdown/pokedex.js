@@ -24,15 +24,15 @@ module.exports = __toCommonJS(pokedex_exports);
 
 const Pokedex = {
   xiaoxin: {
-    num: 2001,
-    name: "Xiaoxin",
+    num: 8848,
+    name: "xiaoxin",
     types: ["Normal"],
     baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
     abilities: {0: "Run Away", 1: "Pickup", H: "Gluttony"},
     heightm: 1.0,
     weightkg: 25.0,
     color: "Yellow",
-    tags: ["Sub-Legendary"],
+    tags: ["Mythical"],
     eggGroups: ["Human-Like"]
   }
 };
