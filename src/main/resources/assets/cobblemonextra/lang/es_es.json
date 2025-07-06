@@ -5,11 +5,9 @@
   "cobblemon.species.xiaoxin.name": "Xiaoxin",
   "cobblemon.species.xiaoxin-mega.name": "Mega Xiaoxin",
   
-  "cobblemon.move.actionbeam.name": "Rayo de Acción",
   "cobblemon.move.actionbeam": "Rayo de Acción",
   "cobblemon.move.actionbeam.desc": "Dispara un rayo lleno del poder del Héroe de Acción para atacar al enemigo. Aumenta el Ataque Especial del usuario después del uso.",
   
-  "cobblemon.move.shakingbutt.name": "Menear Trasero",
   "cobblemon.move.shakingbutt": "Menear Trasero", 
   "cobblemon.move.shakingbutt.desc": "Ataca al enemigo con lindos movimientos de trasero. Siempre ataca primero con alta prioridad.",
   

@@ -5,11 +5,9 @@
   "cobblemon.species.xiaoxin.name": "Xiaoxin",
   "cobblemon.species.xiaoxin-mega.name": "Mega Xiaoxin",
   
-  "cobblemon.move.actionbeam.name": "Action Beam",
   "cobblemon.move.actionbeam": "Action Beam",
   "cobblemon.move.actionbeam.desc": "Fires a beam filled with Action Hero power to attack the enemy. Raises the user's Special Attack after use.",
   
-  "cobblemon.move.shakingbutt.name": "Shaking Butt",
   "cobblemon.move.shakingbutt": "Shaking Butt", 
   "cobblemon.move.shakingbutt.desc": "Attacks the enemy with cute wiggling buttocks. Always strikes first with high priority.",
   

@@ -5,11 +5,9 @@
   "cobblemon.species.xiaoxin.name": "Xiaoxin",
   "cobblemon.species.xiaoxin-mega.name": "Méga-Xiaoxin",
   
-  "cobblemon.move.actionbeam.name": "Rayon d'Action",
   "cobblemon.move.actionbeam": "Rayon d'Action",
   "cobblemon.move.actionbeam.desc": "Tire un rayon rempli du pouvoir du Héros d'Action pour attaquer l'ennemi. Augmente l'Attaque Spéciale de l'utilisateur après usage.",
   
-  "cobblemon.move.shakingbutt.name": "Remuer les Fesses",
   "cobblemon.move.shakingbutt": "Remuer les Fesses", 
   "cobblemon.move.shakingbutt.desc": "Attaque l'ennemi avec de mignons mouvements de fesses. Frappe toujours en premier avec une haute priorité.",
   
