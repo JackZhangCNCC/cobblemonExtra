@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
  * 负责处理与Mega Showdown等其他模组的文件冲突问题
  * 采用延迟加载策略确保我们的文件不被覆盖
  */
-@EventBusSubscriber(modid = CobblemonExtra.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = CobblemonExtra.MOD_ID)
 public class ShowdownConflictResolver {
     
     private static final int DELAY_SECONDS = 5; // 延迟时间，让其他模组先完成操作

@@ -4,6 +4,7 @@ import com.johnson.cobblemonextra.config.CobblemonExtraConfig;
 import com.johnson.cobblemonextra.item.CobblemonExtraItems;
 import com.johnson.cobblemonextra.item.CobblemonExtraCreativeTab;
 import com.johnson.cobblemonextra.showdown.ShowdownDataManager;
+import com.johnson.cobblemonextra.showdown.ShowdownInterceptionManager;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
@@ -20,7 +21,16 @@ public class CobblemonExtra {
     
     public CobblemonExtra(IEventBus modEventBus, ModContainer modContainer) {
         LOGGER.info("CobblemonExtra开始初始化...");
-        
+
+        // 初始化通用Showdown拦截系统
+        LOGGER.info("🚀 初始化通用Showdown拦截系统...");
+        try {
+            ShowdownInterceptionManager.initialize();
+            LOGGER.info("✅ 通用Showdown拦截系统初始化成功！");
+        } catch (Exception e) {
+            LOGGER.error("❌ 通用Showdown拦截系统初始化失败", e);
+        }
+
         // 重新启用早期创建，为智能追加提供基础
         LOGGER.info("正在进行早期Showdown文件创建，为智能追加提供基础...");
         try {
@@ -75,19 +85,19 @@ public class CobblemonExtra {
                 Class<?> itemClass = Class.forName("net.minecraft.world.item.Item");
                 
                 // 获取registerRemap方法
-                java.lang.reflect.Method registerRemapMethod = heldItemManagerClass.getMethod("registerRemap", 
+                java.lang.reflect.Method registerRemapMethod = heldItemManagerClass.getMethod("registerRemap",
                     itemClass, String.class);
-                
+
                 // 获取ACTION_HERO_MASK道具
                 Class<?> itemsClass = Class.forName("com.johnson.cobblemonextra.item.CobblemonExtraItems");
                 java.lang.reflect.Field actionHeroMaskField = itemsClass.getField("ACTION_HERO_MASK");
                 Object actionHeroMaskDeferred = actionHeroMaskField.get(null);
                 java.lang.reflect.Method getMethod = actionHeroMaskDeferred.getClass().getMethod("get");
                 Object actionHeroMaskItem = getMethod.invoke(actionHeroMaskDeferred);
-                
+
                 // 注册映射：action_hero_mask -> actionheromask
-                registerRemapMethod.invoke(heldItemManagerInstance, 
-                    actionHeroMaskItem, 
+                registerRemapMethod.invoke(heldItemManagerInstance,
+                    actionHeroMaskItem,
                     "actionheromask");
                 
                 LOGGER.info("动感超人面具映射注册成功：action_hero_mask -> actionheromask");
