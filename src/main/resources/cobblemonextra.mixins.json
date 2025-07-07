@@ -10,6 +10,7 @@
   "server": [
   ],
   "mixins": [
+    "GravelsExtendedBattlesInterceptorMixin"
   ],
   "injectors": {
     "defaultRequire": 1
